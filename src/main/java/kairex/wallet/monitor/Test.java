@@ -18,7 +18,7 @@ public class Test implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("producing kafka record...");
-		sender.send("test", "payload for test!");
+//		System.out.println("producing kafka record...");
+//		sender.send("test", "payload for test!");
 	}
 }

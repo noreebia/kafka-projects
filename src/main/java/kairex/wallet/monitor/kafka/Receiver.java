@@ -12,7 +12,7 @@ public class Receiver {
 	}
 
 //	@KafkaListener(topics = "${kafka.topics.boot}")
-	@KafkaListener(topics = "test", groupId = "boot")
+	@KafkaListener(topics = {"test", "test2"}, groupId = "boot")
 	public void receive(ConsumerRecord<?, ?> consumerRecord) {
 		System.out.println(consumerRecord.toString());
 	}
