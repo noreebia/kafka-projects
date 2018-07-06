@@ -1,6 +1,7 @@
 package kairex.wallet.monitor.kafka;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
@@ -11,8 +12,8 @@ public class Receiver {
 		System.out.println("Kafka listener listening...");
 	}
 
-//	@KafkaListener(topics = "${kafka.topics.boot}")
-	@KafkaListener(topics = {"test", "test2"}, groupId = "boot")
+	@KafkaListener(topics = "SOOY")
+//	@KafkaListener(topics = {"test", "test2"}, groupId = "boot")
 	public void receive(ConsumerRecord<?, ?> consumerRecord) {
 		System.out.println(consumerRecord.toString());
 	}
